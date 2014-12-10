@@ -1,0 +1,12 @@
+This folder contains a LabVIEW VI that will read Arduino analog inputs from the Olimex ECG/EMG shield, 
+graphically render the readings, and save to file inside the "Recorded Samples" folder. 
+Copy the folders inside the "libraries" folder to "C:\Users\YourName\Documents\Arduino\libraries". 
+Upload the ShieldEkgEmgDemo sketch to the Arduino. Then run the "Six Lead ECG Monitor.vi". 
+This VI takes some time to start working. It will initially give you a constant 512 output for all 
+channels until LabVIEW is synchronized with the Serial Port output from the Arduino. 
+At that point the "Current State" field will change from "Initial State" to "Offset Corrected".
+You can change the name of the savefile if you like. If you want to put in your own signal processing 
+algorithms, do it in the "Consumer Loop" rather than the "Producer Loop". I would like to acknowledge 
+that I DID NOT DEVELOP "SheildEkgEmgDemo" Arduino Sketch or the "TimerOne" and "FlexiTimer2" Arduino 
+Libraries, and credit belongs to their respective developers. These files were included for your 
+convenience so that you can run "Six Lead ECG Monitor.vi"
